@@ -13,15 +13,21 @@ def ler_arquivo_json(caminho_arquivo):
         print("Erro: O arquivo não é um JSON válido.")
         return None
 
-# Caminho do arquivo JSON
-caminho_arquivo = input("Digite o nome do arquivo JSON que deseja ler: ")
+# Função principal que interage com o usuário
+def main():
+    # Caminho do arquivo JSON fornecido pelo usuário
+    caminho_arquivo = input("Digite o nome do arquivo JSON que deseja ler: ")
 
-# Leitura do arquivo
-dados = ler_arquivo_json(caminho_arquivo)
+    # Leitura do arquivo
+    dados = ler_arquivo_json(caminho_arquivo)
 
-# Exibição dos dados lidos
-if dados is not None:
-    print("Conteúdo do arquivo JSON:")
-    print(dados)
-else:
-    print("Não foi possível ler o arquivo JSON.")
+    # Exibição dos dados lidos
+    if dados is not None:
+        print("Conteúdo do arquivo JSON:")
+        print(dados)
+    else:
+        print("Não foi possível ler o arquivo JSON.")
+
+# Executa a função principal somente se o script for executado diretamente
+if __name__ == "__main__":
+    main()
